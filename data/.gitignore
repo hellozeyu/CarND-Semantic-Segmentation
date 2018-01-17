@@ -1,5 +1,6 @@
 data_road/
 vgg/
+.DS_Store
 gtFine_trainvaltest/
 
 vgg16.npy
