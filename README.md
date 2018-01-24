@@ -8,23 +8,23 @@ In this project, we are want to label the pixels of a road in images using a Ful
 ## Final Result
 The result achieved by this implementation is close to what we expected. Cross entropy is about 0.023 and IOU is 0.882. Below are a few examples of segmentation result on the test dataset.
 
-!um_000001](.\runs\1516761901.6535225\um_000001.png)
+[!um_000001](./runs/1516761901.6535225/um_000001.png)
 
-![umm_000008](.\runs\1516761901.6535225\umm_000008.png)
-
-
-
-![um_000061](.\runs\1516761901.6535225\um_000061.png)
+![umm_000008](./runs/1516761901.6535225/umm_000008.png)
 
 
 
-![uu_000094](.\runs\1516761901.6535225\uu_000094.png)
+![um_000061](./runs/1516761901.6535225/um_000061.png)
+
+
+
+![uu_000094](./runs/1516761901.6535225/uu_000094.png)
 
 ## Neural Network Training Checklist
 
 ### Does the project train the model correctly?
 The training turns out to be quite sensitive to the weight initialization. I tried out weights in different ranges with `tf.truncated_normal_initializer` and the  one I picked in the end converged relatively fast, as can be seen below.
-![training_loss](.\training_loss.png)
+![training_loss](./training_loss.png)
 
 ### Does the project use reasonable hyperparameters?
 I am using a relatively powerful GPU, GTX 1080, so have the luxury of using a large batch size 16.  As for the number of epochs, 30 epochs appears to be a good choice based on the above loss/iou charts.
